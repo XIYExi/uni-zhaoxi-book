@@ -1,0 +1,96 @@
+.user_container{
+	background-color: #F8F8F8;
+	padding-left: 30rpx;
+	padding-right: 30rpx;
+	.user_msg_wrapper{
+		margin-top: 60rpx;
+		.user_avatar_wrapper{
+			margin-bottom: 46rpx;
+			width: 100%;
+			text-align: center;
+			& image{
+				display: inline-block;
+				width: 160rpx;
+				height: 160rpx;
+			}
+			
+			.user_avatar_name{
+				font-family: 'Abel';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 32rpx;
+				line-height: 40rpx;
+				text-align: center;
+				color: #1D1E1F;
+			}
+		}
+	}
+	
+	.user_identity_wrapper{
+		text-align: center;
+		
+		& > view{
+			width: 100%;
+			height: 180rpx;
+			border-radius: 16rpx;
+			//border: 1rpx solid #000;
+		}
+		
+		.user_identity_title{
+			margin-bottom: 20rpx;
+			font-family: 'Abel';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 24rpx;
+			line-height: 30rpx;
+			text-align: center;
+		}
+		.user_identity_name{
+			font-family: 'Abel';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 54rpx;
+			line-height: 40rpx;
+			text-align: center;
+			color: #FF6B03;
+		}
+	}
+	
+}
+
+.user_container{
+	.user_action_wrapper{
+		
+		.user_action_item{
+			position: relative;
+			background-color: #fff;
+			border-radius: 16rpx;
+			height: 128rpx;
+			margin-bottom: 20rpx;
+			padding-left: 30rpx;
+			
+			font-family: 'Abel';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 32rpx;
+			line-height: 40rpx;
+			color: #333333;
+			
+			& .user_action_text{
+				position: absolute;
+				top: 44rpx;
+				left: 100rpx;
+			}
+			
+			& image{
+				position: absolute;
+				top: 40rpx;
+				left: 30rpx;
+				width: 48rpx;
+				height: 48rpx;
+			}
+
+		}
+	}
+}
+
