@@ -11,6 +11,12 @@
 			"style": {
 				"navigationBarTitleText": "用户中心"
 			}
+		},
+		{
+			"path": "pages/notice/notice",
+			"style": {
+				"navigationBarTitleText": "公告"
+			}
 		}
 	],
 	"globalStyle": {
