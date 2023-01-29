@@ -10,6 +10,8 @@
 			 v-for="(item, i) in notices"
 			 class="notice_list_item"
 			 :key="item.id"
+			 :id="item.id"
+			 @click="e=>handleJump(e)"
 			>
 				<view v-if="item.cover.length > 0"
 					class='notice_item_showCover'
@@ -97,7 +99,12 @@
 
 		},
 		methods: {
-
+      handleJump(e){
+        //console.log(e.currentTarget.id);
+        uni.navigateTo({
+        	url:`../noticeDetail/noticeDetail?id=${e.currentTarget.id}`
+        })
+      }
 		}
 	}
 

@@ -1,0 +1,1 @@
+<view class="notice_detail_container"><rich-text nodes="{{a}}"></rich-text></view>

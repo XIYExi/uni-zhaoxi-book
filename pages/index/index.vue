@@ -11,11 +11,27 @@
 		</view>
 		
 		<view class='index_swipper_wrapper'>
-			
+			<swiper circular="true" interval="1000" duration="1000" class="swiper">
+				<swiper-item>
+					<image mode="widthFix" src="https://static-1258386385.cos.ap-beijing.myqcloud.com/img/banner/swiper-1.jpg"></image>
+				</swiper-item>
+				<swiper-item>
+					<image mode="widthFix" src="https://static-1258386385.cos.ap-beijing.myqcloud.com/img/banner/swiper-2.jpg"></image>
+				</swiper-item>
+				<swiper-item>
+					<image mode="widthFix" src="https://static-1258386385.cos.ap-beijing.myqcloud.com/img/banner/swiper-3.jpg"></image>
+				</swiper-item>
+				<swiper-item>
+					<image mode="widthFix" src="https://static-1258386385.cos.ap-beijing.myqcloud.com/img/banner/swiper-4.jpg"></image>
+				</swiper-item>
+				<swiper-item>
+					<image mode="widthFix" src="https://static-1258386385.cos.ap-beijing.myqcloud.com/img/banner/swiper-5.jpg"></image>
+				</swiper-item>
+			</swiper>
 		</view>
 		
 		<view class='index_notice_wrapper'>
-			<view class="index_notice_bar">
+			<view class="index_notice_bar" @click='handleJumpToNotice()'>
 				<text class='index_notice_bar_title'>公告</text>
 				<i class='index_notice_bar_icon'> > </i>
 			</view>
@@ -23,7 +39,10 @@
 			<view class="index_notice_preview">
 				<view v-for="(item, i) in notice" 
 				class='index_notice_preview_item' 
-				:key="i">
+				:key="i"
+				:id='item.id'
+				@click='e=>handleJumpToNoticeDetail(e)'
+				>
 					{{item.title}}
 				</view>
 			</view>
@@ -31,7 +50,7 @@
 		</view>
 	
 		<view class='index_new_wrapper'>
-			<view class='index_new_bar'>
+			<view class='index_new_bar' @click="handleJumpToBook()">
 				<text class='index_new_bar_title'>最新出版</text>
 				<i class='index_new_bar_icon'> > </i>
 			</view>
@@ -176,7 +195,22 @@
 
 		},
 		methods: {
-
+			handleJumpToNotice(){
+				uni.navigateTo({
+					url:'../../pages/notice/notice'
+				})
+			},
+			handleJumpToNoticeDetail(e){
+				//console.log(e)
+				uni.navigateTo({
+					url:`../noticeDetail/noticeDetail?id=${e.currentTarget.id}`
+				})
+			},
+			handleJumpToBook(){
+				uni.navigateTo({
+					url: '../book/book'
+				})
+			}
 		}
 	}
 </script>
@@ -226,5 +260,11 @@
 		word-break: break-all;
 	}
 	
+	.swiper {
+		height: 350rpx;
+		image {
+			width: 100%;
+		}
+	}
 	
 </style>

@@ -17,6 +17,18 @@
 			"style": {
 				"navigationBarTitleText": "公告"
 			}
+		},
+		{
+			"path": "pages/noticeDetail/noticeDetail",
+			"style": {
+				"navigationBarTitleText": "公告浏览"
+			}
+		},
+		{
+			"path": "pages/book/book",
+			"style": {
+				"navigationBarTitleText": "最新出版"
+			}
 		}
 	],
 	"globalStyle": {
